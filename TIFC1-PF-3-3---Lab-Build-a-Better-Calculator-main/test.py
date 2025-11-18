@@ -42,26 +42,3 @@ def test_is_seven_point_three_an_integer():
   response = isitaninteger(7.3)
   assert response == False
 
-
-# Seccion para probar los test
-if __name__ == "__main__":
-    #funciones a probar
-    tests = [
-        test_add_multiple_positive_integers,
-        test_add_multiple_complicated_numbers,
-        test_multiply_multiple_positive_integers,
-        test_multiply_multiple_complicated_numbers,
-        test_is_six_even,
-        test_is_minus_three_point_eight_even,
-        test_is_three_an_integer,
-        test_is_seven_point_three_an_integer
-    ]
-    # bucle para probar
-    for t in tests:
-        try:
-            t()
-            print(f"{t.__name__}: OK")
-        except AssertionError:
-            print(f"{t.__name__}: FAIL")
-
-    print("\nPruebas realizadas.")
